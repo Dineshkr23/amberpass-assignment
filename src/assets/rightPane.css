@@ -1,0 +1,79 @@
+.rightPane {
+    background-color: rgb(241, 244, 249);
+    height: 100vh;
+    width: 82vw;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    box-shadow: 0rem 0.1rem 0.3rem 0.01rem rgb(225, 224, 224);
+    background-color: #ffffff;
+    color: rgb(167, 176, 189);
+}
+
+.profileDiv,
+.searchDiv {
+    display: flex;
+    align-items: center;
+}
+
+.profileDiv {
+    width: 20rem;
+    justify-content: space-between;
+}
+
+.searchDiv>input {
+    border: none;
+    outline: none;
+    padding: 0.22rem;
+    font-size: 1rem;
+}
+
+.textDiv>p {
+    margin: 0rem;
+    text-align: center;
+}
+
+.userText {
+    color: black;
+    margin-bottom: 0.3rem !important;
+}
+
+.desgText {
+    color: rgb(124, 132, 144);
+}
+
+.incomeDiv {
+    grid-area: income;
+}
+
+.balanceDiv {
+    grid-area: balances;
+}
+
+.newUsersDiv {
+    grid-area: users;
+}
+.transactionsDiv{
+    grid-area: transactions;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        'income balances'
+        'users balances'
+        'transactions transactions';
+        gap: 2rem;
+        padding: 2rem 10rem;
+}
+
+.incomeDiv,
+.balanceDiv,
+.newUsersDiv {
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+}
