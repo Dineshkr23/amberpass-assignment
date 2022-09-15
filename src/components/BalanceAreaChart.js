@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import "../assets/rightPane.css";
 import { Chart } from "react-google-charts";
-import useWindowSize from "../hooks/useWindowSize";
 
 export const BalanceAreaChart = () => {
-  const size = useWindowSize();
-  const [key, setkey] = useState(false);
   const [data, setData] = useState([
-   
     ["Month", "value"],
     ["Jan", 2],
     ["Feb", 1],
@@ -22,15 +18,11 @@ export const BalanceAreaChart = () => {
     ["Oct", 4],
     ["Nov", 2],
     ["Dec", 5],
-    ["Jan 2022",2]
+    ["Jan 2022", 2],
   ]);
 
-  useEffect(() => {
-    setkey((prevKey) => !prevKey);
-  }, [size.width]);
-
   const options = {
-    width : "100%",
+    width: "100%",
     height: "17.3rem",
     legend: "none",
     hAxis: {
@@ -57,8 +49,12 @@ export const BalanceAreaChart = () => {
   };
   return (
     <Paper className="areaPaper">
-      <Chart key={key} chartType="AreaChart" data={data} options={options} className="areaGraph">
-      </Chart>
+      <Chart
+        chartType="AreaChart"
+        data={data}
+        options={options}
+        className="areaGraph"
+      ></Chart>
     </Paper>
   );
 };

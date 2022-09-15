@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import "../assets/rightPane.css";
-import {
-  Chart,
-  BarSeries,
-} from "@devexpress/dx-react-chart-material-ui";
+import { Chart, BarSeries } from "@devexpress/dx-react-chart-material-ui";
 
 export const UsersBarGraph = () => {
   const [data, setData] = useState([
@@ -17,10 +14,18 @@ export const UsersBarGraph = () => {
     { year: "2010", population: 7, popul: 6 },
   ]);
   return (
-    <Paper className="paper" >
-      <Chart className="chart" data={data} >
-        <BarSeries valueField="population" argumentField="year" className="upperBar"/>
-        <BarSeries valueField="popul" argumentField="year" className="lowerBar"/>
+    <Paper className="paper">
+      <Chart className="chart" data={data}>
+        <BarSeries
+          valueField="population"
+          argumentField="year"
+          className="upperBar"
+        />
+        <BarSeries
+          valueField="popul"
+          argumentField="year"
+          className="lowerBar"
+        />
       </Chart>
     </Paper>
   );
