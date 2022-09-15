@@ -1,5 +1,4 @@
 .leftPane {
-    height: 100vh;
     width: 18vw;
     border-right: 0.01rem solid rgba(167, 176, 189, 0.527);
 }
@@ -17,7 +16,7 @@
 .appName_div {
     border-bottom: 0.01rem solid rgba(167, 176, 189, 0.527);
     font-size: large;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 
@@ -31,7 +30,7 @@
 
 .appSecondary_div>.commonIconName,
 .appLogout_div>.commonIconName,
-.appName_div>.commonIconName{
+.appName_div>.commonIconName {
     padding: 0rem 0.5rem;
 }
 
@@ -54,6 +53,31 @@
     padding: 0rem 0.5rem;
 }
 
+.accordation {
+    box-shadow: none !important;
+    color: rgb(118, 126, 137) !important;
+    margin: 0px !important;
+}
+
+
+.accSummary {
+    padding: 0px 0.5rem !important;
+}
+
+.text {
+    margin-left: 1rem !important;
+    font-weight: 550 !important;
+}
+
+.icon {
+    color: rgb(162, 166, 172) !important;
+}
+.accSummary:focus{
+    background-color: rgb(71,91,219) !important;
+    border-radius: 0.3rem !important;
+    color: #ffffff !important;
+}
+
 
 
 .iconsHover:hover {
@@ -63,9 +87,18 @@
 @media (max-width:1137px) {
     .appName_div {
         display: block;
+        padding: 1rem;
     }
 
     .commonIconName {
         display: block;
+    }
+    .leftPane{
+        display: none;
+    }
+}
+@media (max-width:1079px){
+    .accordation{
+        display: block !important;
     }
 }

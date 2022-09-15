@@ -14,6 +14,13 @@ import InboxOutlinedIcon from "@mui/icons-material/InboxOutlined";
 import FolderOutlinedIcon from "@mui/icons-material/FolderOutlined";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import Avatar from "@mui/material/Avatar";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { deepPurple } from "@mui/material/colors";
+import logo from '../assets/logo.jpg';
+
 
 export const LeftPane = () => {
   return (
@@ -21,35 +28,38 @@ export const LeftPane = () => {
       <div className="appName_div">
         <div className="commonIconName">
           <span className="iconsHover">
-            <Avatar variant="rounded">A</Avatar>
+            <Avatar alt="img" src={logo} variant="rounded"></Avatar>
           </span>
-          <p className="iconsHover">App Name</p>
+          <p className="iconsHover">Artemis</p>
         </div>
       </div>
       <div className="appMain_div">
         <p className="leftTextHeader">MAIN</p>
-        <div className="leftMain_list">
-          <div className="commonIconName">
-            <span className="iconsHover">
-              <AccountCircleIcon />
-            </span>
-            <p className="iconsHover">Dashboard</p>
-          </div>
-          <span className="iconsHover">
-            <ExpandMoreOutlinedIcon />
-          </span>
-        </div>
-        <div className="leftMain_list">
-          <div className="commonIconName">
-            <span className="iconsHover">
-              <LanguageIcon />
-            </span>
-            <p className="iconsHover">Discover</p>
-          </div>
-          <span className="iconsHover">
-            <ExpandMoreOutlinedIcon />
-          </span>
-        </div>
+        <Accordion className="accordation">
+          <AccordionSummary
+            className="accSummary"
+            expandIcon={<ExpandMoreIcon />}
+          >
+            <AccountCircleIcon className="icon" />
+            <Typography className="text">Dashboard</Typography>
+          </AccordionSummary>
+          <AccordionSummary
+            className="accSummary"
+            expandIcon={
+              <Avatar
+                sx={{ bgcolor: deepPurple[800], width: 30, height: 30 }}
+                variant="circle"
+              >
+                4
+              </Avatar>
+            }
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <LanguageIcon className="icon" />
+            <Typography className="text">Discover</Typography>
+          </AccordionSummary>
+        </Accordion>
         <div className="leftMain_list">
           <div className="commonIconName">
             <span className="iconsHover">
